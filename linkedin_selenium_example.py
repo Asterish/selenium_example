@@ -15,9 +15,6 @@ job_details=[]
 browser.get(search_query)
 time.sleep(2)
 job_list=browser.find_elements_by_xpath("//div[@class='base-search-card__info']")
-total_jobs=browser.find_element_by_xpath('/html/body/div[1]/div/main/div/h1/span[1]').text
-new_jobs=browser.find_element_by_xpath('/html/body/div[1]/div/main/div/h1/span[3]').text
-#print(f'{total_jobs} Total Jobs {new_jobs}\n')
 
 for each_job in job_list:
     # Getting job info
