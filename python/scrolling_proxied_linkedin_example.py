@@ -10,7 +10,7 @@ import json
 #webdriver.DesiredCapabilities.FIREFOX['proxy'] = {"httpProxy": PROXY,"sslProxy": PROXY,"proxyType": "MANUAL",}
 
 FILE_PATH_FOLDER = './results/' # path to file
-FILENAME = 'results.csv'
+FILENAME = f'results_{str(datetime.now()).replace(" ", "_")}.csv'
 
 query = 'https://www.linkedin.com/jobs/search?keywords=chief financial officer'
 driver = webdriver.Firefox()
